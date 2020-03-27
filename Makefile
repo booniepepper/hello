@@ -3,8 +3,14 @@
 all : c forth python java racket haskell
 .PHONY : all
 
+run :
+	./run
+.PHONY : run
+
 clean :
-	rm -r ./bin
+	rm -rf ./bin
+	rm -rf ./jar
+.PHONY : clean
 
 # Some utility things
 
