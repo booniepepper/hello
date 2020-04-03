@@ -7,9 +7,9 @@ for BIN in $(ls $REL/bin) ; do
   echo -e "=== $BIN ===\n"
 
   if [[ $1 = timed ]] ; then
-    time $REL/bin/$BIN
+    time $REL/bin/$BIN $2
   else
-    $REL/bin/$BIN
+    $REL/bin/$BIN $1
   fi
 
   echo
