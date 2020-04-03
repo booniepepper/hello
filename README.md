@@ -2,11 +2,16 @@
 
 A small collection of hello world programs.
 
-I wanted to demonstrate some different programming styles and syntaxes.
+I wanted to very briefly demonstrate some different programming styles and syntaxes in a single place. Obviously I'm missing entire paradigms like Logic programming, but... it's a start!
 
-`make all` can compile all of these to Executable Linkable Files (ELFs, the unixy equivalent of an EXE file) except Java
+- `make all` can compile all of these to Executable Linkable Files (ELFs, the unixy equivalent of an EXE file) except Java which uses a helper shell script.
+  - The output is a number of apps in a `bin` directory that can be run in a terminal.
 
-The output is a number of apps in a `bin` directory that can be run in a terminal.
+- `run` can run all the built executables.
+  - `run [name]` If present, the first argument of `run` is passed to the executables as a name.
+  - `run timed [name]` If the first argument is "timed" then the script times each executable and also can take an optional second argument for name.
+
+- `make clean` can remove the executables and other artifacts like `jar` files for Java.
 
 # Setup
 
