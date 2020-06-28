@@ -1,6 +1,6 @@
 # Hello
 
-A small collection of hello world programs.
+A collection of hello world programs.
 
 I wanted to very briefly demonstrate some different programming styles and syntaxes in a single place. Obviously I'm missing entire paradigms like Logic programming, but... it's a start!
 
@@ -18,6 +18,7 @@ I wanted to very briefly demonstrate some different programming styles and synta
 Install toolchains for these 6 languages:
 
 - C: `gcc`
+- COBOL: `gnucobol`
 - Forth: `gforth`
 - Python: `python3`, [`nuitka`](https://www.nuitka.net/pages/download.html)
 - Java: `jdk8` (or higher)
@@ -28,5 +29,5 @@ Install toolchains for these 6 languages:
 
 For Python, Nuitka is used to get a more optimized runtime to better compete with the speeds of C, Forth, and Haskell.
 
-In the real world, Python, Racket, and Forth (and similar languages) are generally used in their interpreted form
+In the real world, Python, Racket, and Forth (and similar languages) are generally used in their interpreted form.
 

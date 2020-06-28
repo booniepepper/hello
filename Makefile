@@ -1,6 +1,6 @@
 # Hello world in a few languages!
 
-all : c forth python java racket haskell
+all : c cobol forth python java racket haskell
 .PHONY : all
 
 run :
@@ -24,6 +24,10 @@ jar :
 c : bin
 	@echo "=== [Compiling C] ==="
 	gcc -o ./bin/hello-from-c ./hello.c
+
+cobol : bin
+	@echo "=== [Compiling COBOL] ==="
+	cobc -x -o ./bin/hello-from-cobol ./hello.cbl
 
 forth : bin
 	@echo "=== [Compiling Forth] ==="
