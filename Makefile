@@ -1,6 +1,6 @@
 # Hello world in a few languages!
 
-all : c cobol forth python java racket haskell
+all : c cobol factor forth python java racket haskell
 .PHONY : all
 
 run :
@@ -32,6 +32,11 @@ cobol : bin
 forth : bin
 	@echo "=== [Compiling Forth] ==="
 	gforthmi --application ./bin/hello-from-forth ./hello.fs
+
+factor : bin
+	@echo "=== [Compiling Factor] ==="
+	factor -roots=. -e='USING: namespaces tools.deploy tools.deploy.config ; "." deploy-directory set "hello" deploy'
+	mv ./hello/hello ./bin/hello-from-factor
 
 python : bin
 	@echo "=== [Compiling Python] ==="

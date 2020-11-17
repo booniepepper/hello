@@ -19,6 +19,7 @@ Install toolchains for these 6 languages:
 
 - C: `gcc`
 - COBOL: `gnucobol`
+- Factor: `factor`
 - Forth: `gforth`
 - Python: `python3`, [`nuitka`](https://www.nuitka.net/pages/download.html)
 - Java: `jdk8` (or higher)
@@ -29,5 +30,5 @@ Install toolchains for these 6 languages:
 
 For Python, Nuitka is used to get a more optimized runtime to better compete with the speeds of C, Forth, and Haskell.
 
-In the real world, Python, Racket, and Forth (and similar languages) are generally used in their interpreted form.
+In the real world, Python, Racket, Forth, and similar languages are most often used in their interpreted form.
 
