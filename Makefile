@@ -1,6 +1,6 @@
 # Hello world in a few languages!
 
-all : c cobol factor forth python java racket haskell
+all : c cobol forth ocaml python java racket haskell
 .PHONY : all
 
 run :
@@ -27,16 +27,22 @@ c : bin
 
 cobol : bin
 	@echo "=== [Compiling COBOL] ==="
-	cobc -x -o ./bin/hello-from-cobol ./hello.cbl
+	cobc -xO -o ./bin/hello-from-cobol ./hello.cbl
 
 forth : bin
 	@echo "=== [Compiling Forth] ==="
 	gforthmi --application ./bin/hello-from-forth ./hello.fs
 
+# TODO: Fix Factor compile(?) or document installation
 factor : bin
 	@echo "=== [Compiling Factor] ==="
 	factor -roots=. -e='USING: namespaces tools.deploy tools.deploy.config ; "." deploy-directory set "hello" deploy'
 	mv ./hello/hello ./bin/hello-from-factor
+
+ocaml : bin
+	@echo "=== [Compiling OCaml] ==="
+	ocamlc -o ./bin/hello-from-ocaml ./hello.ml
+	rm hello.cmi hello.cmo
 
 python : bin
 	@echo "=== [Compiling Python] ==="
@@ -44,6 +50,7 @@ python : bin
 	@echo "=== [Cleaning up after Python] ==="
 	rm -r ./hello.build
 
+# TODO: Use GraalVM's NativeImage
 java : bin jar
 	@echo "=== [Compiling Java] ==="
 	javac ./hello.java
