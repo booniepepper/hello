@@ -4,5 +4,5 @@ let name =
     else "world"
 
 let () =
-    Printf.printf "Hello, %s!\n" name
+    Printf.printf "Hello %s!\n" name
 
